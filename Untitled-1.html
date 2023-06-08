@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+</head>
+<body>
+
+    Answer the following questions below:
+
+    - What are important differences between Python and JavaScript?
+        JavaScript is a scripting language that helps you create interactive web pages, while Python is a high-level object-oriented programming language that has built-in data  structures, combined with dynamic binding and typing
+    - Given a dictionary like ``{"a": 1, "b": 2}``: , list two ways you
+      can try to get a missing key (like "c") *without* your programming
+      crashing.
+    
+      
+    country_code = {'India' : '0091',
+                    'Australia' : '0025',
+                    'Nepal' : '00977'}
+    country_code.setdefault('Japan', 'Not Present')
+    print(country_code['India'])
+    print(country_code['Japan'])// 
+    
+    
+    import collections
+    defd = collections.defaultdict(lambda : 'Key Not found')
+     defd['a'] = 1
+     defd['b'] = 2
+     print ("The value associated with 'a' is : ",end="")
+    print (defd['a'])
+     print ("The value associated with 'c' is : ",end="")
+    print (defd['c'])
+    
+    - What is a unit test?
+      the smallest piece of code that can be logically isolated in a system.
+    - What is an integration test?
+      a type of software testing in which the different units, modules or components of a software application are tested as a combined entity.
+    - What is the role of web application framework, like Flask?
+      enable them to create and scale web apps quickly and simply 
+    - You can pass information to Flask either as a parameter in a route URL
+      (like '/foods/pretzel') or using a URL query param (like
+      'foods?type=pretzel'). How might you choose which one is a better fit
+      for an application?
+      Query param are extensions of the URL that are used to help define specific content
+    - How do you collect data from a URL placeholder parameter using Flask?
+      use the args property of this global request object to get the values of query parameters
+    - How do you collect data from the query string using Flask?
+      accessing the query_string property of the request object
+    - How do you collect data from the body of the request using Flask?
+      import request and use request. args. 
+    - What is a cookie and what kinds of things are they commonly used for?
+      to tell the server that users have returned to a particular website
+    - What is the session object in Flask?
+      used to track the session data which is a dictionary object that contains a key-value pair of the session variables and their associated values.
+    
+    - What does Flask's `jsonify()` do?
+      returns a Response object
+</body>
+</html>
